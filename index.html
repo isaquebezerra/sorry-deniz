@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sorry Card for Deniz</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 420px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      border-radius: 24px;
+      padding: 32px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .emoji {
+      font-size: 56px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      color: #ffd166;
+      font-weight: bold;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 14px 22px;
+      border: none;
+      border-radius: 999px;
+      background: #ffd166;
+      color: #1f2937;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background: #ffbe3d;
+    }
+
+    .hidden-message {
+      display: none;
+      margin-top: 24px;
+      font-size: 16px;
+      color: #f8f9fa;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .signature {
+      margin-top: 28px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="emoji">😅</div>
+
+    <h1>Sorry, Deniz</h1>
+
+    <p>
+      I officially apologize for saying you work in
+      <span class="highlight">real estate</span>
+      when you actually do
+      <span class="highlight">marketing and production</span>.
+    </p>
+
+    <p>
+      My memory clearly had a bug…  
+      but luckily, I know how to fix bugs.
+    </p>
+
+    <button onclick="showMessage()">Accept my apology?</button>
+
+    <div class="hidden-message" id="message">
+      Promise I won’t forget again 😂<br />
+      And if I do, I’ll have to program a better sorry card next time.
+    </div>
+
+    <div class="signature">
+      — From your IT guy 💻
+    </div>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
+</body>
+</html>
